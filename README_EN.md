@@ -8,7 +8,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Providers-6-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 
 - [The haul at a glance](#the-haul-at-a-glance)
 - [Which one should I pick?](#which-one-should-i-pick)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [QuanticData](#quanticdata) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
 - [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
 - [Rules of this list](#rules-of-this-list)
 - [Contributing](#contributing)
@@ -53,7 +53,6 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 | [Exa](#exa) | Search API for AI agents | **$10 signup + $10 onboarding + $10/mo ≈ ~4,300 searches in month one** | No | $10 monthly |
 | [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo ≈ ~1,000 basic searches** | No | Monthly |
 | [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits ≈ ~1,000 page extracts** | No | One-time trial |
-| [QuanticData](#quanticdata) | SERP + scraping APIs | **$2 credit/mo** | No | Monthly |
 
 ---
 
@@ -61,9 +60,8 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 
 - **Search the web, maximum volume:** Keenable — 100k requests/mo.
 - **Search the web, best quality for AI:** Exa or Tavily — results come with relevance scores.
-- **Fetch one page's content:** Tabstack Extract, or QuanticData's scraping endpoints.
+- **Fetch one page's content:** Tabstack Extract.
 - **Let it research a topic across the web and summarize:** Tabstack Research.
-- **Raw Google results (SERP):** QuanticData.
 - **Embeddings / reranking:** see the [add-on zone](#add-on-zone-embeddings-and-reranking-not-web-search) below — Voyage (200M tokens per model, the biggest haul) or Mixedbread.
 
 ---
@@ -88,7 +86,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   1. Sign up at [https://exa.ai](https://exa.ai).
   2. Finish the onboarding flow to release the second $10.
   3. Create a key in the console and check each credit tranche's expiry date there.
-- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first.
+- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first. Also note: this platform bans accounts — one of our accounts holding the full $60 was disabled on 2026-11-22 with its balance stranded. Spend credits promptly; don't hoard them.
 
 ## Tavily
 
@@ -111,17 +109,6 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   2. Click the verification link in the email, then set an organization name and a password.
   3. The console at [https://console.tabstack.ai/dashboard](https://console.tabstack.ai/dashboard) shows the balance; create an API key there when you need one.
 - **Traps (tested 2026-11-22):** The console calls it a "free trial" and does **not** print an expiry date for the credits — don't hoard them forever.
-
-## QuanticData
-
-- **What:** SERP, scraping, crawl and data APIs behind one key, billed per successful result only.
-- **Free:** $2 of credit every month, no card — about 2,222 plain SERP searches or ~1,300 scraped pages at list price. Failed or blocked calls are never billed.
-- **Card:** Not required.
-- **How to claim:**
-  1. Register at [https://app.quanticdata.io/register](https://app.quanticdata.io/register).
-  2. Create a key at [https://app.quanticdata.io/api-keys](https://app.quanticdata.io/api-keys).
-  3. Call `https://api.quanticdata.io/v1` with `Authorization: Bearer <key>`.
-- **Traps (fresh-account test, 2026-11-22):** The advertised $2/mo free tier has a catch — **it unlocks only after your first paid order**; before that the balance is $0 and the API refuses every call (first_order_required). Also, the $2 covers the **Data APIs** only. Residential proxies are a separate product — the separate 100 MB proxy trial asks for SMS verification.
 
 ---
 

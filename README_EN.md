@@ -20,7 +20,15 @@
 
 ## What this is
 
-A list dedicated to **free credits for search-class APIs only**: web search, page fetching, embeddings and reranking. Every entry was registered by hand, the credit was verified in the provider's console, and the claim steps and traps are written down. Dead offers are marked dead, not deleted — so the next person doesn't waste an evening on them.
+**Search keys for AIs that can't search.**
+
+Most AI models and agents can't browse the web: ask one about today's news, the latest docs, or a fresh fix for an error and it has no way to look it up. This list collects the APIs that give them that ability — web search, page fetching, embeddings and reranking — with the free credits, claim steps and traps for each, every entry personally registered and verified in the provider's console before listing. Dead offers are marked dead, not deleted, so the next person doesn't waste an evening on them.
+
+**What you can do with it**
+
+- Wire a search endpoint into your agent, bot or AI app so it can look things up and read pages itself.
+- Build it into your own project: RAG knowledge bases, research assistants, data scraping, competitor monitoring.
+- Run on the free credits first to prove the integration works — the table converts every haul into approximate call counts — and only pay when you outgrow them.
 
 **Inclusion rules:** free, no credit card, personally claimed and verified. No rumors, no scraped lists.
 

@@ -8,7 +8,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-6-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,8 +38,9 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 
 - [The haul at a glance](#the-haul-at-a-glance)
 - [Which one should I pick?](#which-one-should-i-pick)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
+- [Add-on zone 2: data scraping (not web search)](#add-on-zone-2-data-scraping-not-web-search)
 - [Rules of this list](#rules-of-this-list)
 - [Contributing](#contributing)
 
@@ -141,6 +142,27 @@ The two below **do not search the web**. They live in their own zone, separate f
   2. Create an API key in the platform console.
   3. Call `https://api.mixedbread.com/v1` with `Authorization: Bearer <key>`.
 - **Traps (tested 2026-11-22):** One-time $5 only — our balance showed $4.98 after the first test calls. In the vendor's own words, data collected under the free tier is retained indefinitely.
+
+---
+
+## Add-on zone 2: data scraping (not web search)
+
+This one does not search the web either — it pulls ready-made data from platforms. Useful for monitoring, product research and lead hunting, so it gets its own zone, clearly labelled.
+
+| Provider | What | Free | Card? | Renews |
+|---|---|---|---|---|
+| [SocialCrawl](#socialcrawl) | Social + e-commerce data API | **100 credits ≈ ~100 calls, never expire** | No | One-time |
+
+### SocialCrawl
+
+- **What:** A data API for social and e-commerce platforms (X, Reddit, Hacker News, Product Hunt, LinkedIn jobs, Amazon, Xiaohongshu, and more).
+- **Free:** 100 credits on signup, never expire; a standard call costs 1 credit, so roughly 100 calls.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up at [https://socialcrawl.dev](https://socialcrawl.dev) with an email address and set a password.
+  2. Click the verification link in the email (login is blocked until the email is verified).
+  3. Create an API key in the console at [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api).
+- **Traps (tested 2026-11-22):** Small amount — only 100 calls. Email verification is mandatory before the first login.
 
 ---
 

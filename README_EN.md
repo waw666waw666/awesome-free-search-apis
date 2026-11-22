@@ -26,6 +26,16 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 
 ---
 
+## Contents
+
+- [The haul at a glance](#the-haul-at-a-glance)
+- [Which one should I pick?](#which-one-should-i-pick)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [QuanticData](#quanticdata) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Rules of this list](#rules-of-this-list)
+- [Contributing](#contributing)
+
+---
+
 ## The haul at a glance
 
 | Provider | What | Free | Card? | Renews |
@@ -37,6 +47,17 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 | [QuanticData](#quanticdata) | SERP + scraping APIs | **$2 credit/mo** | No | Monthly |
 | [Voyage AI](#voyage-ai) | Embedding + rerank API | **200M tokens per model ≈ ~1M short-text embeddings** | No | One-time per account |
 | [Mixedbread](#mixedbread) | Embedding + rerank + search API | **$5 Starter credit ≈ ~1,250 semantic searches** | No | One-time |
+
+---
+
+## Which one should I pick?
+
+- **Search the web, maximum volume:** Keenable — 100k requests/mo.
+- **Search the web, best quality for AI:** Exa or Tavily — results come with relevance scores.
+- **Fetch one page's content:** Tabstack Extract, or QuanticData's scraping endpoints.
+- **Let it research a topic across the web and summarize:** Tabstack Research.
+- **Raw Google results (SERP):** QuanticData.
+- **Embeddings / reranking (search-stack parts, they don't search the web themselves):** Voyage (200M tokens per model, the biggest haul) or Mixedbread.
 
 ---
 
@@ -123,5 +144,9 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 - **Sources and steps only.** No accounts, no keys, no referral tricks.
 - **Tested, not copied.** Every entry carries its verification date; the console is the source of truth.
 - **Dead deals get marked, not deleted.**
+
+## Contributing
+
+PRs adding new search-class freebies or correcting dead offers are welcome. One inclusion rule: **personally registered and verified in the console**. Use the fixed format: what it is / how much (with approx. call counts) / card required? / claim steps / traps / verification date. No rumors, no copied lists.
 
 Last verified: 2026-11-22.

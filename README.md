@@ -8,7 +8,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-6-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,8 +38,9 @@
 
 - [总表](#总表)
 - [怎么选](#怎么选)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
+- [配套区二：数据抓取（不搜网页）](#配套区二数据抓取不搜网页)
 - [本清单的规矩](#本清单的规矩)
 - [贡献](#贡献)
 
@@ -141,6 +142,27 @@
   2. 在平台控制台创建 API key。
   3. 调用 `https://api.mixedbread.com/v1`，请求头 `Authorization: Bearer <key>`。
 - **坑**（2026-11-22 实测）：只有一次性 $5，我们实测余额 $4.98；厂商原文称免费档数据会被无限期保留。
+
+---
+
+## 配套区二：数据抓取（不搜网页）
+
+这一家也不搜网页，它抓的是各平台现成的数据。做舆情、选品、找线索时会用到，单放一区，不混进搜索名单。
+
+| 服务 | 是什么 | 薅多少 | 绑卡 | 刷新 |
+| :--- | :--- | :--- | :---: | :--- |
+| [SocialCrawl](#socialcrawl) | 社交 + 电商数据抓取 API | **100 credits ≈ 约 100 次调用，永不过期** | 否 | 一次性 |
+
+### SocialCrawl
+
+- **是什么**：社交与电商平台的数据抓取 API（X、Reddit、Hacker News、Product Hunt、LinkedIn 招聘、Amazon、小红书等）。
+- **薅多少**：注册送 100 credits，永不过期；标准调用 1 credit/次，约够 100 次调用。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://socialcrawl.dev](https://socialcrawl.dev) 用邮箱注册并设密码。
+  2. 点邮件里的验证链接（不验证不能登录）。
+  3. 在控制台 [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api) 创建 API key。
+- **坑**（2026-11-22 实测）：量小，只有 100 次；注册后必须先完成邮箱验证才能进控制台。
 
 ---
 

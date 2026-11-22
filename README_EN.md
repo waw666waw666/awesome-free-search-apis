@@ -86,7 +86,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   1. Sign up at [https://exa.ai](https://exa.ai).
   2. Finish the onboarding flow to release the second $10.
   3. Create a key in the console and check each credit tranche's expiry date there.
-- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first. Also note: this platform bans accounts — one of our accounts holding the full $60 was disabled on 2026-11-22 with its balance stranded. Spend credits promptly; don't hoard them.
+- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first. Also note: this platform bans accounts — one of our accounts holding the full $60 was disabled on 2026-11-22 with its balance stranded. Spend credits promptly; don't hoard them. One more tested detail: the $10 onboarding bonus shown on the home page did **not** land on our fresh 2026-11-22 account (only the $10 signup bonus arrived) — it appears to require finishing every onboarding step, including inviting a team member.
 
 ## Tavily
 

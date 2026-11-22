@@ -31,19 +31,19 @@
 | 服务 | 是什么 | 薅多少 | 绑卡 | 刷新 |
 | :--- | :--- | :--- | :---: | :--- |
 | [Keenable](#keenable) | 搜索 + 网页抓取 API | **每月 100,000 次请求** | 否 | 每月（21 日重置） |
-| [Exa](#exa) | AI 搜索 API | **注册 $10 + 引导 $10 + 每月 $10** | 否 | 每月 $10 |
-| [Tavily](#tavily) | AI 搜索 API | **每月 1,000 credits** | 否 | 每月 |
-| [Tabstack](#tabstack) | 网页访问 API（提取/研究） | **10,000 credits** | 否 | 一次性试用 |
+| [Exa](#exa) | AI 搜索 API | **注册 $10 + 引导 $10 + 每月 $10 ≈ 首月约 4,300 次搜索** | 否 | 每月 $10 |
+| [Tavily](#tavily) | AI 搜索 API | **每月 1,000 credits ≈ 约 1,000 次基础搜索** | 否 | 每月 |
+| [Tabstack](#tabstack) | 网页访问 API（提取/研究） | **10,000 credits ≈ 约 1,000 次正文提取** | 否 | 一次性试用 |
 | [QuanticData](#quanticdata) | SERP + 爬虫 API | **每月 $2 额度** | 否 | 每月 |
-| [Voyage AI](#voyage-ai) | 嵌入 + 重排 API | **每模型 2 亿 token** | 否 | 一次性（按账号） |
-| [Mixedbread](#mixedbread) | 嵌入 + 重排 + 搜索 API | **$5 新手额度** | 否 | 一次性 |
+| [Voyage AI](#voyage-ai) | 嵌入 + 重排 API | **每模型 2 亿 token ≈ 约 100 万次短文本嵌入** | 否 | 一次性（按账号） |
+| [Mixedbread](#mixedbread) | 嵌入 + 重排 + 搜索 API | **$5 新手额度 ≈ 约 1,250 次语义搜索** | 否 | 一次性 |
 
 ---
 
 ## Keenable
 
 - **是什么**：给 AI 智能体用的网页搜索与页面抓取 API，一把 key 全包。
-- **薅多少**：免费档每月 100,000 次搜索/抓取请求，每月 21 日重置；按超量价 $4/千次算，约值 $400/月。
+- **薅多少**：免费档每月 100,000 次搜索/抓取请求（约 100,000 次调用），每月 21 日重置；按超量价 $4/千次算，约值 $400/月。
 - **绑不绑卡**：不绑。
 - **怎么领**：
   1. 在 [https://keenable.ai](https://keenable.ai) 用邮箱注册并验证。
@@ -54,7 +54,7 @@
 ## Exa
 
 - **是什么**：为 AI 智能体和 RAG 设计的搜索 API。
-- **薅多少**：注册 $10 + 完成新手引导 $10，之后每月免费 $10。我们领时（2026-11）兑换码 `EXA20FREEBUFF`、`EXA20FIRESHIP` 各加了 $20——这类码说没就没，领时实测，别信旧帖。
+- **薅多少**：注册 $10 + 完成新手引导 $10，之后每月免费 $10；按标准搜索 $7/千次算，首月 $30 约够 4,300 次搜索，之后每月约 1,400 次。我们领时（2026-11）兑换码 `EXA20FREEBUFF`、`EXA20FIRESHIP` 各加了 $20——这类码说没就没，领时实测，别信旧帖。
 - **绑不绑卡**：不绑，邮箱验证码登录，无密码。
 - **怎么领**：
   1. 在 [https://exa.ai](https://exa.ai) 注册。
@@ -65,7 +65,7 @@
 ## Tavily
 
 - **是什么**：给 AI 智能体用的搜索 / 提取 / 爬取 API。
-- **薅多少**：Researcher 免费档每月 1,000 credits（基础搜索 1 次 1 credit，深度搜索 2 credits），每月重置。
+- **薅多少**：Researcher 免费档每月 1,000 credits，每月重置——约 1,000 次基础搜索（1 次 1 credit），或约 500 次深度搜索（1 次 2 credits）。
 - **绑不绑卡**：不绑。
 - **怎么领**：
   1. 在 [https://app.tavily.com](https://app.tavily.com) 用邮箱 + 密码注册，验证邮箱。
@@ -76,7 +76,7 @@
 ## Tabstack
 
 - **是什么**：Mozilla 出品的网页访问 API（Research / Extract / Generate / Automate），免费额度约够 1,000 次正文提取或 40 次快速研究。
-- **薅多少**：注册送 10,000 credits，控制台原文 "10,000 credits remaining"。
+- **薅多少**：注册送 10,000 credits，控制台原文 "10,000 credits remaining"——约 1,000 次正文提取，或约 40 次快速研究。
 - **绑不绑卡**：不绑。
 - **怎么领**：
   1. 在 [https://tabstack.ai](https://tabstack.ai) 用邮箱注册。
@@ -98,7 +98,7 @@
 ## Voyage AI
 
 - **是什么**：MongoDB 家的嵌入与重排模型（Voyage），搜索和 RAG 的检索层。
-- **薅多少**：按模型、按账号的一次性额度：现行每个模型 2 亿 token（voyage-4、voyage-4-large、voyage-4-lite、voyage-context-4、voyage-code-4、rerank-3 等），领域模型（voyage-finance-2、voyage-law-2、voyage-code-2）各 5,000 万，多模态另有 2 亿文本 token + 1,500 亿像素。
+- **薅多少**：按模型、按账号的一次性额度：现行每个模型 2 亿 token（voyage-4、voyage-4-large、voyage-4-lite、voyage-context-4、voyage-code-4、rerank-3 等），领域模型（voyage-finance-2、voyage-law-2、voyage-code-2）各 5,000 万，多模态另有 2 亿文本 token + 1,500 亿像素。按每篇 200 token 估，2 亿 token 约够 100 万次短文本嵌入。
 - **绑不绑卡**：不绑。
 - **怎么领**：
   1. 在 [https://dash.voyageai.com](https://dash.voyageai.com) 注册账号。
@@ -108,7 +108,7 @@
 ## Mixedbread
 
 - **是什么**：嵌入、重排与搜索 API（mxbai 系列模型、Toast 1）。
-- **薅多少**：$5 一次性 Starter 额度，不绑卡，不续期，有效期未公布。
+- **薅多少**：$5 一次性 Starter 额度，不绑卡，不续期，有效期未公布——按语义搜索 $4/千次算约 1,250 次，或按 Fast 索引 $0.25/百万 token 算约索引 2,000 万 token 内容。
 - **绑不绑卡**：不绑。
 - **怎么领**：
   1. 在 [https://www.mixedbread.com](https://www.mixedbread.com) 注册（我们用的是 GitHub 登录）。

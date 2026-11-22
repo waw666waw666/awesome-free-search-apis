@@ -114,7 +114,7 @@
   1. 在 [https://app.quanticdata.io/register](https://app.quanticdata.io/register) 注册。
   2. 在 [https://app.quanticdata.io/api-keys](https://app.quanticdata.io/api-keys) 建 key。
   3. 调用 `https://api.quanticdata.io/v1`，请求头 `Authorization: Bearer <key>`。
-- **坑**：$2 只覆盖 Data APIs；住宅代理是另一个产品，它的 100 MB 试用要短信验证，别混。
+- **坑**（2026-11-22 新号实测）：宣传的每月 $2 免费有个前置——**新号必须先完成第一笔付费订单，免费档才解锁**；没下单前余额 $0，接口直接拒调（first_order_required）。另外 $2 只覆盖 Data APIs；住宅代理是另一个产品，它的 100 MB 试用要短信验证，别混。
 
 ## Voyage AI
 

@@ -114,7 +114,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
   1. Register at [https://app.quanticdata.io/register](https://app.quanticdata.io/register).
   2. Create a key at [https://app.quanticdata.io/api-keys](https://app.quanticdata.io/api-keys).
   3. Call `https://api.quanticdata.io/v1` with `Authorization: Bearer <key>`.
-- **Traps:** The $2 covers the **Data APIs** only. Residential proxies are a separate product — the separate 100 MB proxy trial asks for SMS verification.
+- **Traps (fresh-account test, 2026-11-22):** The advertised $2/mo free tier has a catch — **it unlocks only after your first paid order**; before that the balance is $0 and the API refuses every call (first_order_required). Also, the $2 covers the **Data APIs** only. Residential proxies are a separate product — the separate 100 MB proxy trial asks for SMS verification.
 
 ## Voyage AI
 

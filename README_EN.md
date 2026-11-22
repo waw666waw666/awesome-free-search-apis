@@ -50,7 +50,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 | Provider | What | Free | Card? | Renews |
 |---|---|---|---|---|
 | [Keenable](#keenable) | Search + page fetch API | **100,000 requests/mo** | No | Monthly (resets on the 21st) |
-| [Exa](#exa) | Search API for AI agents | **$10 signup + $10 onboarding + $10/mo ≈ ~4,300 searches in month one** | No | $10 monthly |
+| [Exa](#exa) | Search API for AI agents | **$10 signup + $10/mo ≈ ~1,400 searches/month (onboarding $10 tested: not paid)** | No | $10 monthly |
 | [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo ≈ ~1,000 basic searches** | No | Monthly |
 | [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits ≈ ~1,000 page extracts** | No | One-time trial |
 
@@ -80,13 +80,13 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 ## Exa
 
 - **What:** Search API designed for AI agents and RAG pipelines.
-- **Free:** $10 for signing up + $10 for finishing onboarding, then $10 free every month. At the standard $7 per 1k searches, the first month's $30 buys ≈4,300 searches, then ≈1,400/month. When we claimed (2026-11), the codes `EXA20FREEBUFF` and `EXA20FIRESHIP` added $20 each — codes like these die without notice, test at claim time, don't trust old posts.
+- **Free:** $10 for signing up (expires 2026-12-01), then $10 free every month. At the standard $7 per 1k searches, $10 buys ≈1,400 searches. The $10 onboarding bonus shown on the home page does not pay out — see Traps. When we claimed (2026-11), the codes `EXA20FREEBUFF` and `EXA20FIRESHIP` added $20 each — codes like these die without notice, test at claim time, don't trust old posts.
 - **Card:** Not required. Email code login, no password.
 - **How to claim:**
   1. Sign up at [https://exa.ai](https://exa.ai).
-  2. Finish the onboarding flow to release the second $10.
+  2. You can walk through onboarding, but don't count on its $10 bonus (see Traps).
   3. Create a key in the console and check each credit tranche's expiry date there.
-- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first. Also note: this platform bans accounts — one of our accounts holding the full $60 was disabled on 2026-11-22 with its balance stranded. Spend credits promptly; don't hoard them. One more tested detail: the $10 onboarding bonus shown on the home page did **not** land on our fresh 2026-11-22 account (only the $10 signup bonus arrived) — it appears to require finishing every onboarding step, including inviting a team member.
+- **Traps (tested 2026-11-19):** Credit tranches expire separately — one of our $10 tranches expired on 2026-12-01 while the rest stayed. Spend the expiring tranche first. Also note: this platform bans accounts — one of our accounts holding the full $60 was disabled on 2026-11-22 with its balance stranded. Spend credits promptly; don't hoard them. The $10 onboarding bonus is decorative — don't spend time on it: on 2026-11-22 we did every step there is — created a key, searched once ourselves, sent a team invite, had the invitee accept and join, and had the invitee run a search as a member — and checked billing three times; the balance only ever held the $10 signup credit. The bonus never arrived.
 
 ## Tavily
 

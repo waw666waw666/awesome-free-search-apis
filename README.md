@@ -8,7 +8,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
   <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Providers-6-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@
 
 - [总表](#总表)
 - [怎么选](#怎么选)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [QuanticData](#quanticdata) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
 - [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
 - [本清单的规矩](#本清单的规矩)
 - [贡献](#贡献)
@@ -53,7 +53,6 @@
 | [Exa](#exa) | AI 搜索 API | **注册 $10 + 引导 $10 + 每月 $10 ≈ 首月约 4,300 次搜索** | 否 | 每月 $10 |
 | [Tavily](#tavily) | AI 搜索 API | **每月 1,000 credits ≈ 约 1,000 次基础搜索** | 否 | 每月 |
 | [Tabstack](#tabstack) | 网页访问 API（提取/研究） | **10,000 credits ≈ 约 1,000 次正文提取** | 否 | 一次性试用 |
-| [QuanticData](#quanticdata) | SERP + 爬虫 API | **每月 $2 额度** | 否 | 每月 |
 
 ---
 
@@ -61,9 +60,8 @@
 
 - **搜全网、量要大**：Keenable，每月 10 万次，首选。
 - **搜全网、要质量**：Exa 或 Tavily，结果带相关性分数，适合喂给 AI。
-- **抓某个网页的正文**：Tabstack 的 Extract，或 QuanticData 的抓取接口。
+- **抓某个网页的正文**：Tabstack 的 Extract。
 - **让它自己上网查一圈再汇总**：Tabstack 的 Research。
-- **要谷歌搜索结果页（SERP）**：QuanticData。
 - **做嵌入/重排**：在下面的[配套区](#配套区嵌入与重排不搜网页)，Voyage（每模型 2 亿 token，量最大）或 Mixedbread。
 
 ---
@@ -88,7 +86,7 @@
   1. 在 [https://exa.ai](https://exa.ai) 注册。
   2. 走完新手引导，释放第二笔 $10。
   3. 控制台建 key，并看清每笔额度的到期日。
-- **坑**（2026-11-19 实测）：每笔额度有效期不同，我们有一笔 $10 在 2026-12-01 过期，其余还在——先花快到期的。
+- **坑**（2026-11-19 实测）：每笔额度有效期不同，我们有一笔 $10 在 2026-12-01 过期，其余还在——先花快到期的。另外这家会封号：我们一个领满 $60 的账号在 2026-11-22 被官方禁用，余额直接悬置——领到尽快用，别囤。
 
 ## Tavily
 
@@ -111,17 +109,6 @@
   2. 点邮件里的验证链接，再填组织名和密码。
   3. 控制台 [https://console.tabstack.ai/dashboard](https://console.tabstack.ai/dashboard) 看余额，要用时在里面建 API key。
 - **坑**（2026-11-22 实测）：控制台只写 free trial，**不标注额度到期日**，别囤太久。
-
-## QuanticData
-
-- **是什么**：SERP、爬取、整站爬行等数据 API，一把 key 通用，只按成功结果计费。
-- **薅多少**：每月 $2 免费额度，不绑卡；约够 2,222 次普通 SERP 搜索或 1,300 次页面抓取，失败和被拦的调用不计费。
-- **绑不绑卡**：不绑。
-- **怎么领**：
-  1. 在 [https://app.quanticdata.io/register](https://app.quanticdata.io/register) 注册。
-  2. 在 [https://app.quanticdata.io/api-keys](https://app.quanticdata.io/api-keys) 建 key。
-  3. 调用 `https://api.quanticdata.io/v1`，请求头 `Authorization: Bearer <key>`。
-- **坑**（2026-11-22 新号实测）：宣传的每月 $2 免费有个前置——**新号必须先完成第一笔付费订单，免费档才解锁**；没下单前余额 $0，接口直接拒调（first_order_required）。另外 $2 只覆盖 Data APIs；住宅代理是另一个产品，它的 100 MB 试用要短信验证，别混。
 
 ---
 

@@ -31,19 +31,19 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 | Provider | What | Free | Card? | Renews |
 |---|---|---|---|---|
 | [Keenable](#keenable) | Search + page fetch API | **100,000 requests/mo** | No | Monthly (resets on the 21st) |
-| [Exa](#exa) | Search API for AI agents | **$10 signup + $10 onboarding + $10/mo** | No | $10 monthly |
-| [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo** | No | Monthly |
-| [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits** | No | One-time trial |
+| [Exa](#exa) | Search API for AI agents | **$10 signup + $10 onboarding + $10/mo ≈ ~4,300 searches in month one** | No | $10 monthly |
+| [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo ≈ ~1,000 basic searches** | No | Monthly |
+| [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits ≈ ~1,000 page extracts** | No | One-time trial |
 | [QuanticData](#quanticdata) | SERP + scraping APIs | **$2 credit/mo** | No | Monthly |
-| [Voyage AI](#voyage-ai) | Embedding + rerank API | **200M tokens per model** | No | One-time per account |
-| [Mixedbread](#mixedbread) | Embedding + rerank + search API | **$5 Starter credit** | No | One-time |
+| [Voyage AI](#voyage-ai) | Embedding + rerank API | **200M tokens per model ≈ ~1M short-text embeddings** | No | One-time per account |
+| [Mixedbread](#mixedbread) | Embedding + rerank + search API | **$5 Starter credit ≈ ~1,250 semantic searches** | No | One-time |
 
 ---
 
 ## Keenable
 
 - **What:** Web search and page-fetch API built for AI agents. One key covers search and fetch.
-- **Free:** 100,000 search/fetch requests per month, resetting on the 21st — about $400/mo at the $4-per-1k overage price.
+- **Free:** 100,000 search/fetch requests per month (≈100,000 calls), resetting on the 21st — about $400/mo at the $4-per-1k overage price.
 - **Card:** Not required.
 - **How to claim:**
   1. Sign up at [https://keenable.ai](https://keenable.ai) with an email address and verify it.
@@ -54,7 +54,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 ## Exa
 
 - **What:** Search API designed for AI agents and RAG pipelines.
-- **Free:** $10 for signing up + $10 for finishing onboarding, then $10 free every month. When we claimed (2026-11), the codes `EXA20FREEBUFF` and `EXA20FIRESHIP` added $20 each — codes like these die without notice, test at claim time, don't trust old posts.
+- **Free:** $10 for signing up + $10 for finishing onboarding, then $10 free every month. At the standard $7 per 1k searches, the first month's $30 buys ≈4,300 searches, then ≈1,400/month. When we claimed (2026-11), the codes `EXA20FREEBUFF` and `EXA20FIRESHIP` added $20 each — codes like these die without notice, test at claim time, don't trust old posts.
 - **Card:** Not required. Email code login, no password.
 - **How to claim:**
   1. Sign up at [https://exa.ai](https://exa.ai).
@@ -65,7 +65,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 ## Tavily
 
 - **What:** Search / extract / crawl API for AI agents.
-- **Free:** The Researcher plan is free forever: 1,000 credits per month (basic search = 1 credit, advanced search = 2), resetting monthly.
+- **Free:** The Researcher plan is free forever: 1,000 credits per month, resetting monthly — ≈1,000 basic searches (1 credit each) or ≈500 advanced searches (2 credits each).
 - **Card:** Not required.
 - **How to claim:**
   1. Sign up at [https://app.tavily.com](https://app.tavily.com) with email + password and verify the email.
@@ -76,7 +76,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 ## Tabstack
 
 - **What:** Mozilla's web-access API for agents — Research / Extract / Generate / Automate. The free credits cover roughly 1,000 Markdown extracts or 40 fast research runs.
-- **Free:** 10,000 credits on signup, shown in the console as "10,000 credits remaining".
+- **Free:** 10,000 credits on signup, shown in the console as "10,000 credits remaining" — ≈1,000 page extracts or ≈40 fast research runs.
 - **Card:** Not required.
 - **How to claim:**
   1. Sign up at [https://tabstack.ai](https://tabstack.ai) with an email address.
@@ -98,7 +98,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 ## Voyage AI
 
 - **What:** Embedding and reranking models (MongoDB's Voyage), the retrieval layer for search and RAG.
-- **Free:** A one-time allowance **per model, per account**: 200M tokens on each current model (voyage-4, voyage-4-large, voyage-4-lite, voyage-context-4, voyage-code-4, rerank-3, …), 50M on the domain models (voyage-finance-2, voyage-law-2, voyage-code-2), plus 200M text tokens and 150B pixels on the multimodal models.
+- **Free:** A one-time allowance **per model, per account**: 200M tokens on each current model (voyage-4, voyage-4-large, voyage-4-lite, voyage-context-4, voyage-code-4, rerank-3, …), 50M on the domain models (voyage-finance-2, voyage-law-2, voyage-code-2), plus 200M text tokens and 150B pixels on the multimodal models. At ~200 tokens per passage, 200M tokens ≈ 1M short-text embeddings.
 - **Card:** Not required.
 - **How to claim:**
   1. Create an account at [https://dash.voyageai.com](https://dash.voyageai.com).
@@ -108,7 +108,7 @@ A list dedicated to **free credits for search-class APIs only**: web search, pag
 ## Mixedbread
 
 - **What:** Embeddings, reranking and search APIs (mxbai models, Toast 1).
-- **Free:** $5 one-time Starter credit, no card required. It does not renew and its expiry is not published.
+- **Free:** $5 one-time Starter credit, no card required. It does not renew and its expiry is not published. At $4 per 1k semantic searches that's ≈1,250 searches, or ≈20M content tokens indexed at the Fast rate of $0.25 per 1M tokens.
 - **Card:** Not required.
 - **How to claim:**
   1. Sign up at [https://www.mixedbread.com](https://www.mixedbread.com) (we used GitHub login).

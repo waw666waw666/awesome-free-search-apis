@@ -39,6 +39,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 - [The haul at a glance](#the-haul-at-a-glance)
 - [Which one should I pick?](#which-one-should-i-pick)
 - [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [QuanticData](#quanticdata) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
 - [Rules of this list](#rules-of-this-list)
 - [Contributing](#contributing)
 
@@ -53,8 +54,6 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 | [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo ≈ ~1,000 basic searches** | No | Monthly |
 | [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits ≈ ~1,000 page extracts** | No | One-time trial |
 | [QuanticData](#quanticdata) | SERP + scraping APIs | **$2 credit/mo** | No | Monthly |
-| [Voyage AI](#voyage-ai) | Embedding + rerank API | **200M tokens per model ≈ ~1M short-text embeddings** | No | One-time per account |
-| [Mixedbread](#mixedbread) | Embedding + rerank + search API | **$5 Starter credit ≈ ~1,250 semantic searches** | No | One-time |
 
 ---
 
@@ -65,7 +64,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 - **Fetch one page's content:** Tabstack Extract, or QuanticData's scraping endpoints.
 - **Let it research a topic across the web and summarize:** Tabstack Research.
 - **Raw Google results (SERP):** QuanticData.
-- **Embeddings / reranking (search-stack parts, they don't search the web themselves):** Voyage (200M tokens per model, the biggest haul) or Mixedbread.
+- **Embeddings / reranking:** see the [add-on zone](#add-on-zone-embeddings-and-reranking-not-web-search) below — Voyage (200M tokens per model, the biggest haul) or Mixedbread.
 
 ---
 
@@ -124,7 +123,18 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   3. Call `https://api.quanticdata.io/v1` with `Authorization: Bearer <key>`.
 - **Traps (fresh-account test, 2026-11-22):** The advertised $2/mo free tier has a catch — **it unlocks only after your first paid order**; before that the balance is $0 and the API refuses every call (first_order_required). Also, the $2 covers the **Data APIs** only. Residential proxies are a separate product — the separate 100 MB proxy trial asks for SMS verification.
 
-## Voyage AI
+---
+
+## Add-on zone: embeddings and reranking (not web search)
+
+The two below **do not search the web**. They live in their own zone, separate from the search list above. They are parts inside a search engine: turning text into vectors (embeddings) and reordering results (reranking). You need them for RAG and for building your own site search — and the credits are real — so they are listed here, clearly labelled as not search engines.
+
+| Provider | What | Free | Card? | Renews |
+|---|---|---|---|---|
+| [Voyage AI](#voyage-ai) | Embedding + rerank API | **200M tokens per model ≈ ~1M short-text embeddings** | No | One-time per account |
+| [Mixedbread](#mixedbread) | Embedding + rerank + search over your own data | **$5 Starter credit ≈ ~1,250 semantic searches** | No | One-time |
+
+### Voyage AI
 
 - **What:** Embedding and reranking models (MongoDB's Voyage), the retrieval layer for search and RAG.
 - **Free:** A one-time allowance **per model, per account**: 200M tokens on each current model (voyage-4, voyage-4-large, voyage-4-lite, voyage-context-4, voyage-code-4, rerank-3, …), 50M on the domain models (voyage-finance-2, voyage-law-2, voyage-code-2), plus 200M text tokens and 150B pixels on the multimodal models. At ~200 tokens per passage, 200M tokens ≈ 1M short-text embeddings.
@@ -134,7 +144,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   2. In the API keys section, create a secret key — the free tokens are spent before any paid usage automatically.
 - **Traps (tested 2026-11-21):** Free tokens do **not** apply to Batch API usage. The free tier's rate limits are low (we measured tier 0 at 3 RPM / 10k TPM) — fine for testing, not for bulk jobs. Free-tier content may be used for training unless you opt out.
 
-## Mixedbread
+### Mixedbread
 
 - **What:** Embeddings, reranking and search APIs (mxbai models, Toast 1).
 - **Free:** $5 one-time Starter credit, no card required. It does not renew and its expiry is not published. At $4 per 1k semantic searches that's ≈1,250 searches, or ≈20M content tokens indexed at the Fast rate of $0.25 per 1M tokens.

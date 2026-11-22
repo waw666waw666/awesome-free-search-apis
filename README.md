@@ -39,6 +39,7 @@
 - [总表](#总表)
 - [怎么选](#怎么选)
 - [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [QuanticData](#quanticdata) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread)
+- [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
 - [本清单的规矩](#本清单的规矩)
 - [贡献](#贡献)
 
@@ -53,8 +54,6 @@
 | [Tavily](#tavily) | AI 搜索 API | **每月 1,000 credits ≈ 约 1,000 次基础搜索** | 否 | 每月 |
 | [Tabstack](#tabstack) | 网页访问 API（提取/研究） | **10,000 credits ≈ 约 1,000 次正文提取** | 否 | 一次性试用 |
 | [QuanticData](#quanticdata) | SERP + 爬虫 API | **每月 $2 额度** | 否 | 每月 |
-| [Voyage AI](#voyage-ai) | 嵌入 + 重排 API | **每模型 2 亿 token ≈ 约 100 万次短文本嵌入** | 否 | 一次性（按账号） |
-| [Mixedbread](#mixedbread) | 嵌入 + 重排 + 搜索 API | **$5 新手额度 ≈ 约 1,250 次语义搜索** | 否 | 一次性 |
 
 ---
 
@@ -65,7 +64,7 @@
 - **抓某个网页的正文**：Tabstack 的 Extract，或 QuanticData 的抓取接口。
 - **让它自己上网查一圈再汇总**：Tabstack 的 Research。
 - **要谷歌搜索结果页（SERP）**：QuanticData。
-- **做嵌入/重排（搜索的配套零件，自己不搜网页）**：Voyage（每模型 2 亿 token，量最大）或 Mixedbread。
+- **做嵌入/重排**：在下面的[配套区](#配套区嵌入与重排不搜网页)，Voyage（每模型 2 亿 token，量最大）或 Mixedbread。
 
 ---
 
@@ -124,7 +123,18 @@
   3. 调用 `https://api.quanticdata.io/v1`，请求头 `Authorization: Bearer <key>`。
 - **坑**（2026-11-22 新号实测）：宣传的每月 $2 免费有个前置——**新号必须先完成第一笔付费订单，免费档才解锁**；没下单前余额 $0，接口直接拒调（first_order_required）。另外 $2 只覆盖 Data APIs；住宅代理是另一个产品，它的 100 MB 试用要短信验证，别混。
 
-## Voyage AI
+---
+
+## 配套区：嵌入与重排（不搜网页）
+
+下面两家**自己不搜网页**，单放一区，不混进上面的搜索名单。它们是搜索引擎内部的零件：把文字变成向量（嵌入）、把搜出来的结果重新排序（重排）。做 RAG、做自己的站内搜索时会用到，额度也是真的，所以收进来，但说清它们不是搜索引擎。
+
+| 服务 | 是什么 | 薅多少 | 绑卡 | 刷新 |
+| :--- | :--- | :--- | :---: | :--- |
+| [Voyage AI](#voyage-ai) | 嵌入 + 重排 API | **每模型 2 亿 token ≈ 约 100 万次短文本嵌入** | 否 | 一次性（按账号） |
+| [Mixedbread](#mixedbread) | 嵌入 + 重排 + 自有数据搜索 API | **$5 新手额度 ≈ 约 1,250 次语义搜索** | 否 | 一次性 |
+
+### Voyage AI
 
 - **是什么**：MongoDB 家的嵌入与重排模型（Voyage），搜索和 RAG 的检索层。
 - **薅多少**：按模型、按账号的一次性额度：现行每个模型 2 亿 token（voyage-4、voyage-4-large、voyage-4-lite、voyage-context-4、voyage-code-4、rerank-3 等），领域模型（voyage-finance-2、voyage-law-2、voyage-code-2）各 5,000 万，多模态另有 2 亿文本 token + 1,500 亿像素。按每篇 200 token 估，2 亿 token 约够 100 万次短文本嵌入。
@@ -134,7 +144,7 @@
   2. 在 API keys 区创建 secret key，免费 token 自动先行抵扣。
 - **坑**（2026-11-21 实测）：免费 token 不覆盖 Batch API；免费档限速低（实测 tier 0 为 3 RPM / 10k TPM），只适合测试；免费档内容默认可能用于训练，可在设置里退出。
 
-## Mixedbread
+### Mixedbread
 
 - **是什么**：嵌入、重排与搜索 API（mxbai 系列模型、Toast 1）。
 - **薅多少**：$5 一次性 Starter 额度，不绑卡，不续期，有效期未公布——按语义搜索 $4/千次算约 1,250 次，或按 Fast 索引 $0.25/百万 token 算约索引 2,000 万 token 内容。

@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
-  <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Verified-2026--11--24-brightgreen.svg?style=flat-square" alt="Verified">
+  <img src="https://img.shields.io/badge/Providers-8-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 
 - [The haul at a glance](#the-haul-at-a-glance)
 - [Which one should I pick?](#which-one-should-i-pick)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
 - [Add-on zone 2: data scraping (not web search)](#add-on-zone-2-data-scraping-not-web-search)
 - [Rules of this list](#rules-of-this-list)
@@ -54,6 +54,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 | [Exa](#exa) | Search API for AI agents | **$10 signup + $10/mo ≈ ~1,400 searches/month (onboarding $10 tested: not paid)** | No | $10 monthly |
 | [Tavily](#tavily) | Search API for AI agents | **1,000 credits/mo ≈ ~1,000 basic searches** | No | Monthly |
 | [Tabstack](#tabstack) | Web access API (extract / research) | **10,000 credits ≈ ~1,000 page extracts** | No | One-time trial |
+| [cloro](#cloro) | Search API (Google + AI answers) | **500 credits/mo ≈ ~166 searches** | No | Monthly |
 
 ---
 
@@ -110,6 +111,19 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
   2. Click the verification link in the email, then set an organization name and a password.
   3. The console at [https://console.tabstack.ai/dashboard](https://console.tabstack.ai/dashboard) shows the balance; create an API key there when you need one.
 - **Traps (tested 2026-11-22):** The console calls it a "free trial" and does **not** print an expiry date for the credits — don't hoard them forever.
+
+---
+
+## cloro
+
+- **What:** Structured API for Google Search plus AI answer engines (ChatGPT / Perplexity / Gemini / Copilot answers), for giving agents web search.
+- **Free:** 500 credits/month on the free tier, refreshed monthly — an async Google search costs 3 credits (~166 searches/month); a search with AI Overview costs 5 credits (~100/month).
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://cloro.dev](https://cloro.dev) (email-code login, no password step).
+  2. Open the dashboard [https://dashboard.cloro.dev](https://dashboard.cloro.dev) and create a key on the API keys page.
+  3. Call `POST https://api.cloro.dev/v1/monitor/google` with header `Authorization: Bearer <key>`.
+- **Traps (tested 2026-11-24):** The sign-up page has a Cloudflare human check that fails in some network environments — retry from a regular browser environment; synchronous (SYNC) requests carry a +2 credit surcharge, so use async calls (3 credits each) for bulk work; 1 concurrent job; the quota is small, light use only.
 
 ---
 

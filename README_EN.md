@@ -41,6 +41,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 - [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
 - [Add-on zone 2: data scraping (not web search)](#add-on-zone-2-data-scraping-not-web-search)
+- [Add-on zone 3: voice (transcription and synthesis)](#add-on-zone-3-voice-transcription-and-synthesis)
 - [Rules of this list](#rules-of-this-list)
 - [Contributing](#contributing)
 
@@ -177,6 +178,93 @@ This one does not search the web either — it pulls ready-made data from platfo
   2. Click the verification link in the email (login is blocked until the email is verified).
   3. Create an API key in the console at [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api).
 - **Traps (tested 2026-11-22):** Small amount — only 100 calls. Email verification is mandatory before the first login.
+
+---
+
+## Add-on zone 3: voice (transcription and synthesis)
+
+These do not search the web either — they are voice APIs: speech-to-text and text-to-speech. Useful for transcription, dubbing and voice apps, so they get their own zone, clearly labelled.
+
+| Provider | What | Free | Card? | Renews |
+|---|---|---|---|---|
+| [Speechmatics](#speechmatics) | Speech-to-text + TTS API | **$100 credit on signup** | No | One-time |
+| [AssemblyAI](#assemblyai) | Speech transcription API | **$50 credit on signup, never expires** | No | One-time |
+| [Deepgram](#deepgram) | Transcription / synthesis / voice agent API | **$200 credit on signup, never expires** | No | One-time |
+| [Gladia](#gladia) | Speech-to-text API | **€50 on signup ≈ ~312 hours of transcription** | No | One-time |
+| [Cartesia](#cartesia) | Voice API (TTS / voice agents) | **20,000 credits + $1 per month** | No | Monthly |
+| [Fish Audio](#fish-audio) | TTS API | **S2.1 Pro free, unlimited (until 2026-11-30)** | No | Limited time |
+| [HeyGen](#heygen) | TTS API (Voice Turbo) | **Free model, $0 per 1M characters (until 2026-11-30)** | No | Limited time |
+
+### Speechmatics
+
+- **What:** Speech-to-text plus TTS API.
+- **Free:** $100 credit on signup.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://www.speechmatics.com](https://www.speechmatics.com).
+  2. Create an API key in the console at [https://portal.speechmatics.com](https://portal.speechmatics.com).
+- **Traps (tested 2026-11-17):** Do not add a card — adding one upgrades you to a paid plan.
+
+### AssemblyAI
+
+- **What:** Speech transcription API.
+- **Free:** $50 credit on signup; the docs say it never expires.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://www.assemblyai.com](https://www.assemblyai.com).
+  2. A Default key is generated automatically; grab it in the console.
+- **Traps (tested 2026-11-17):** The LLM Gateway is not part of the free tier.
+
+### Deepgram
+
+- **What:** Speech transcription, synthesis and voice agent API.
+- **Free:** $200 one-time credit on signup; the vendor says it never expires.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://deepgram.com](https://deepgram.com).
+  2. Create an API key in the console.
+- **Traps (tested 2026-11-21):** Reading your balance needs an Admin-role key; a Default key gets a 403 on billing.
+
+### Gladia
+
+- **What:** Speech-to-text API.
+- **Free:** €50 on signup, roughly 312 hours of async transcription, valid 1 year.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://www.gladia.io](https://www.gladia.io).
+  2. Create an API key in the console.
+- **Traps (tested 2026-11-21):** No big traps so far; usage is metered by transcription duration, so budget before bulk runs.
+
+### Cartesia
+
+- **What:** Voice API, focused on TTS and voice agents.
+- **Free:** 20,000 credits plus $1 of voice-agent credit per month on the free plan, refreshed monthly.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://www.cartesia.ai](https://www.cartesia.ai).
+  2. Create an API key in the console.
+- **Traps (tested 2026-11-18):** The free plan has no commercial license — check the terms before commercial use.
+
+### Fish Audio
+
+- **What:** TTS API; S2.1 Pro is its flagship synthesis model.
+- **Free:** The model s2.1-pro-free is free and unlimited (fair use), **only until 2026-11-30**.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up with email at [https://fish.audio](https://fish.audio).
+  2. Create a key on the API keys page and call with model `s2.1-pro-free`.
+- **Traps (tested 2026-11-24):** A misspelled model name silently falls back to the paid s2.1-pro ($15 per 1M bytes) — double-check the model string; free requests may be used to improve the model.
+
+### HeyGen
+
+- **What:** An avatar-video vendor; its Voice Turbo is a TTS model.
+- **Free:** The model heygen-voice-1-turbo-free is free ($0 per 1M characters), **only until 2026-11-30**; shared capacity, may return 429 when busy.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up at [https://www.heygen.com](https://www.heygen.com) via email magic link (there is no password signup form).
+  2. Create an API key on the developer platform [https://platform.heygen.com](https://platform.heygen.com).
+  3. Call `POST https://api.heygen.com/v3/models/audio/tts` with header `X-Api-Key: <key>`.
+- **Traps (tested 2026-11-24):** Creating a key forces phone verification — have an SMS-capable number ready; output_format must include encoding, num_channels alone returns a 400.
 
 ---
 

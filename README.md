@@ -41,6 +41,7 @@
 - [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
 - [配套区二：数据抓取（不搜网页）](#配套区二数据抓取不搜网页)
+- [配套区三：语音（转写与合成）](#配套区三语音转写与合成)
 - [本清单的规矩](#本清单的规矩)
 - [贡献](#贡献)
 
@@ -177,6 +178,93 @@
   2. 点邮件里的验证链接（不验证不能登录）。
   3. 在控制台 [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api) 创建 API key。
 - **坑**（2026-11-22 实测）：量小，只有 100 次；注册后必须先完成邮箱验证才能进控制台。
+
+---
+
+## 配套区三：语音（转写与合成）
+
+这几家也不搜网页，是语音 API：语音转文字和文字转语音。做转写、配音、语音应用时会用到，单放一区，不混进搜索名单。
+
+| 服务 | 是什么 | 薅多少 | 绑卡 | 刷新 |
+| :--- | :--- | :--- | :---: | :--- |
+| [Speechmatics](#speechmatics) | 语音转文字 + TTS API | **注册 $100 额度** | 否 | 一次性 |
+| [AssemblyAI](#assemblyai) | 语音转写 API | **注册 $50 额度，不过期** | 否 | 一次性 |
+| [Deepgram](#deepgram) | 转写 / 合成 / 语音 Agent API | **注册 $200 额度，不过期** | 否 | 一次性 |
+| [Gladia](#gladia) | 语音转文字 API | **注册 €50 ≈ 约 312 小时转写** | 否 | 一次性 |
+| [Cartesia](#cartesia) | 语音 API（TTS / 语音代理） | **每月 20,000 credits + $1** | 否 | 每月 |
+| [Fish Audio](#fish-audio) | TTS API | **S2.1 Pro 免费不限量（到 2026-11-30）** | 否 | 限时 |
+| [HeyGen](#heygen) | TTS API（Voice Turbo） | **免费模型 $0/百万字符（到 2026-11-30）** | 否 | 限时 |
+
+### Speechmatics
+
+- **是什么**：语音转文字 + TTS API。
+- **薅多少**：注册送 $100 额度。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.speechmatics.com](https://www.speechmatics.com) 用邮箱注册。
+  2. 在控制台 [https://portal.speechmatics.com](https://portal.speechmatics.com) 创建 API key。
+- **坑**（2026-11-17 实测）：别绑卡，绑卡会升级成付费档。
+
+### AssemblyAI
+
+- **是什么**：语音转写 API。
+- **薅多少**：注册送 $50 额度，官方文档称永不过期。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.assemblyai.com](https://www.assemblyai.com) 用邮箱注册。
+  2. 注册后自动生成 Default key，在控制台取用。
+- **坑**（2026-11-17 实测）：LLM Gateway 不在免费范围里。
+
+### Deepgram
+
+- **是什么**：语音转写 / 合成 / 语音 Agent API。
+- **薅多少**：注册送 $200 一次性额度，官方称永不过期。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://deepgram.com](https://deepgram.com) 用邮箱注册。
+  2. 在控制台创建 API key。
+- **坑**（2026-11-21 实测）：读余额要用 Admin 角色的 key，Default key 读余额会 403。
+
+### Gladia
+
+- **是什么**：语音转文字 API。
+- **薅多少**：注册送 €50，约 312 小时异步转写，1 年有效。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.gladia.io](https://www.gladia.io) 用邮箱注册。
+  2. 在控制台创建 API key。
+- **坑**（2026-11-21 实测）：暂无大坑，额度按转写时长走，批量转写前先算好。
+
+### Cartesia
+
+- **是什么**：语音 API，主打 TTS 与语音代理。
+- **薅多少**：免费版每月 20,000 credits + $1 语音代理额度，每月刷新。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.cartesia.ai](https://www.cartesia.ai) 用邮箱注册。
+  2. 在控制台创建 API key。
+- **坑**（2026-11-18 实测）：免费版无商用授权，商用前先看条款。
+
+### Fish Audio
+
+- **是什么**：TTS API，S2.1 Pro 是它家的旗舰合成模型。
+- **薅多少**：模型 s2.1-pro-free 免费不限量调用（合理使用），**只到 2026-11-30**。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://fish.audio](https://fish.audio) 用邮箱注册。
+  2. 在 API keys 页创建 key，调用时 model 填 `s2.1-pro-free`。
+- **坑**（2026-11-24 实测）：模型名拼错会静默改走付费模型 s2.1-pro（$15/百万字节），填完务必核对；免费请求可能被用于改进模型。
+
+### HeyGen
+
+- **是什么**：数字人视频厂商，它的 Voice Turbo 是 TTS 模型。
+- **薅多少**：模型 heygen-voice-1-turbo-free 免费调用（$0/百万字符），**只到 2026-11-30**，共享容量、忙时可能 429。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.heygen.com](https://www.heygen.com) 用邮箱魔法链接注册（没有密码注册表单）。
+  2. 在开发者平台 [https://platform.heygen.com](https://platform.heygen.com) 创建 API key。
+  3. 调用 `POST https://api.heygen.com/v3/models/audio/tts`，请求头 `X-Api-Key: <key>`。
+- **坑**（2026-11-24 实测）：建 key 强制手机验证，要先备一个能收短信的号码；output_format 必须带 encoding，只给 num_channels 会报 400。
 
 ---
 

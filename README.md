@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
-  <img src="https://img.shields.io/badge/Verified-2026--11--22-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-7-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Verified-2026--11--24-brightgreen.svg?style=flat-square" alt="Verified">
+  <img src="https://img.shields.io/badge/Providers-8-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@
 
 - [总表](#总表)
 - [怎么选](#怎么选)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
 - [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
 - [配套区二：数据抓取（不搜网页）](#配套区二数据抓取不搜网页)
 - [本清单的规矩](#本清单的规矩)
@@ -54,6 +54,7 @@
 | [Exa](#exa) | AI 搜索 API | **注册 $10 + 每月 $10 ≈ 每月约 1,400 次搜索（引导 $10 实测未发）** | 否 | 每月 $10 |
 | [Tavily](#tavily) | AI 搜索 API | **每月 1,000 credits ≈ 约 1,000 次基础搜索** | 否 | 每月 |
 | [Tabstack](#tabstack) | 网页访问 API（提取/研究） | **10,000 credits ≈ 约 1,000 次正文提取** | 否 | 一次性试用 |
+| [cloro](#cloro) | 搜索 API（Google + AI 答案） | **每月 500 credits ≈ 约 166 次搜索** | 否 | 每月 |
 
 ---
 
@@ -110,6 +111,19 @@
   2. 点邮件里的验证链接，再填组织名和密码。
   3. 控制台 [https://console.tabstack.ai/dashboard](https://console.tabstack.ai/dashboard) 看余额，要用时在里面建 API key。
 - **坑**（2026-11-22 实测）：控制台只写 free trial，**不标注额度到期日**，别囤太久。
+
+---
+
+## cloro
+
+- **是什么**：Google 搜索 + AI 答案引擎（ChatGPT / Perplexity / Gemini / Copilot 答案）的结构化 API，给智能体做联网搜索。
+- **薅多少**：免费档每月 500 credits，每月刷新——异步 Google 搜索 3 credits/次（约 166 次/月），带 AI Overview 的搜索 5 credits/次（约 100 次/月）。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://cloro.dev](https://cloro.dev) 点 Sign up，用邮箱注册（邮箱验证码登录，没有密码步）。
+  2. 打开控制台 [https://dashboard.cloro.dev](https://dashboard.cloro.dev)，在 API keys 页创建 key。
+  3. 调用 `POST https://api.cloro.dev/v1/monitor/google`，请求头 `Authorization: Bearer <key>`。
+- **坑**（2026-11-24 实测）：注册页有 Cloudflare 人机验证，某些网络环境点不过，换常用浏览器环境再试；同步（SYNC）请求另收 +2 credits 附加费，批量调用走异步才是 3 credits/次；每批 1 个并发任务，量小只够轻量用。
 
 ---
 

@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
-  <img src="https://img.shields.io/badge/Verified-2026--11--24-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-8-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Verified-2026--11--28-brightgreen.svg?style=flat-square" alt="Verified">
+  <img src="https://img.shields.io/badge/Providers-11-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@
 
 - [总表](#总表)
 - [怎么选](#怎么选)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl) · [ScraperAPI](#scraperapi) · [Crawl4AI](#crawl4ai) · [Plugsky](#plugsky)
 - [配套区：嵌入与重排（不搜网页）](#配套区嵌入与重排不搜网页)
 - [配套区二：数据抓取（不搜网页）](#配套区二数据抓取不搜网页)
 - [配套区三：语音（转写与合成）](#配套区三语音转写与合成)
@@ -162,11 +162,14 @@
 
 ## 配套区二：数据抓取（不搜网页）
 
-这一家也不搜网页，它抓的是各平台现成的数据。做舆情、选品、找线索时会用到，单放一区，不混进搜索名单。
+这几家也不搜网页，它们抓的是网页正文或各平台现成的数据。做舆情、选品、找线索、喂 RAG 时会用到，单放一区，不混进搜索名单。
 
 | 服务 | 是什么 | 薅多少 | 绑卡 | 刷新 |
 | :--- | :--- | :--- | :---: | :--- |
 | [SocialCrawl](#socialcrawl) | 社交 + 电商数据抓取 API | **100 credits ≈ 约 100 次调用，永不过期** | 否 | 一次性 |
+| [ScraperAPI](#scraperapi) | 网页抓取 API（绕反爬） | **首 7 天 5000 credits，之后每月 1000** | 否 | 试用 7 天，之后每月 |
+| [Crawl4AI](#crawl4ai) | 网页抓取 API | **每月 1000 credits ≈ 约 1 万普通页** | 否 | 每月（1 日重置） |
+| [Plugsky](#plugsky) | 代理 + 抓取 API（OpenAI 兼容） | **每天 100 次请求 + 5 万 token** | 否 | 每天 |
 
 ### SocialCrawl
 
@@ -178,6 +181,40 @@
   2. 点邮件里的验证链接（不验证不能登录）。
   3. 在控制台 [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api) 创建 API key。
 - **坑**（2026-11-22 实测）：量小，只有 100 次；注册后必须先完成邮箱验证才能进控制台。
+
+### ScraperAPI
+
+- **是什么**：网页抓取 API，把目标页的 HTML 抓回来，绕反爬；支持 JS 渲染、指定国家出口。
+- **薅多少**：注册送 5000 API credits，首 7 天试用；试用结束（2026-12-05）后转免费档，每月 1000 credits，5 并发，不结转。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://www.scraperapi.com](https://www.scraperapi.com) 用邮箱注册并设密码。
+  2. 点 Cloudflare 验证，通过后点 SIGN UP WITH EMAIL 提交。
+  3. 点 SEND ACTIVATION EMAIL，再点邮件里的激活链接激活账号。
+  4. 进控制台，API key 已自动生成，首页即见。
+- **坑**（2026-11-28 实测）：云端浏览器点验证 8 次全败，必须用本机 Chrome；试用只有 7 天，到期只剩每月 1000；Google/Bing 页一次 25 credits、反爬站 +10，5000 烧得快。
+
+### Crawl4AI
+
+- **是什么**：网页抓取 API（Scrape / Extract / SERP / Search / Answer），按页计费。
+- **薅多少**：免费档每月 1000 credits，普通页 0.1 credit、真实浏览器页 0.5、反爬站 2 credits，失败调用免费；约够 1 万普通页/月，首月另有 20 starter credits。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://crawl4ai.com](https://crawl4ai.com) 用邮箱注册。
+  2. 点邮件里的验证链接，验证后才转永久（不验证只给 7 天）。
+  3. 控制台建 API key，调用 `POST https://api.crawl4ai.com/scrape`，请求头 `Authorization: Bearer <key>`。
+- **坑**（2026-11-24 实测）：免费档按页计费不是按次；反爬站 2 credits/页；每账号最多 3 把 key；控制台主 key 只显示一次，建完立刻存好。
+
+### Plugsky
+
+- **是什么**：代理 + 抓取 API，OpenAI 兼容接口，每天免费 100 次请求 + 5 万 token，附带免费聊天模型。
+- **薅多少**：新号每天 100 次请求 + 5 万 token（micro/lite 模型），每天重置；2 把 API key。
+- **绑不绑卡**：不绑。
+- **怎么领**：
+  1. 在 [https://plugsky.com](https://plugsky.com) 用邮箱注册并设密码。
+  2. 填邮箱验证码（6 位，10 分钟有效）。
+  3. 进控制台，注册弹窗里直接给完整 API key，当场复制保存。
+- **坑**（2026-11-28 实测）：完整 key 只在注册弹窗显示一次，关了只剩掩码；2 把 key 上限已满，要新建得先吊销一把再建。
 
 ---
 

@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-22272e.svg?style=flat-square" alt="License"></a>
-  <img src="https://img.shields.io/badge/Verified-2026--11--24-brightgreen.svg?style=flat-square" alt="Verified">
-  <img src="https://img.shields.io/badge/Providers-8-blue.svg?style=flat-square" alt="Providers">
+  <img src="https://img.shields.io/badge/Verified-2026--11--28-brightgreen.svg?style=flat-square" alt="Verified">
+  <img src="https://img.shields.io/badge/Providers-11-blue.svg?style=flat-square" alt="Providers">
   <img src="https://img.shields.io/badge/Credit%20Card-Not%20Required-success.svg?style=flat-square" alt="No credit card">
 </p>
 
@@ -38,7 +38,7 @@ Most AI models and agents can't browse the web: ask one about today's news, the 
 
 - [The haul at a glance](#the-haul-at-a-glance)
 - [Which one should I pick?](#which-one-should-i-pick)
-- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl)
+- [Keenable](#keenable) · [Exa](#exa) · [Tavily](#tavily) · [Tabstack](#tabstack) · [cloro](#cloro) · [Voyage AI](#voyage-ai) · [Mixedbread](#mixedbread) · [SocialCrawl](#socialcrawl) · [ScraperAPI](#scraperapi) · [Crawl4AI](#crawl4ai) · [Plugsky](#plugsky)
 - [Add-on zone: embeddings and reranking (not web search)](#add-on-zone-embeddings-and-reranking-not-web-search)
 - [Add-on zone 2: data scraping (not web search)](#add-on-zone-2-data-scraping-not-web-search)
 - [Add-on zone 3: voice (transcription and synthesis)](#add-on-zone-3-voice-transcription-and-synthesis)
@@ -162,11 +162,14 @@ The two below **do not search the web**. They live in their own zone, separate f
 
 ## Add-on zone 2: data scraping (not web search)
 
-This one does not search the web either — it pulls ready-made data from platforms. Useful for monitoring, product research and lead hunting, so it gets its own zone, clearly labelled.
+These do not search the web either — they fetch page content or pull ready-made data from platforms. Useful for monitoring, product research, lead hunting and feeding RAG, so they get their own zone, clearly labelled.
 
 | Provider | What | Free | Card? | Renews |
 |---|---|---|---|---|
 | [SocialCrawl](#socialcrawl) | Social + e-commerce data API | **100 credits ≈ ~100 calls, never expire** | No | One-time |
+| [ScraperAPI](#scraperapi) | Web scraping API (anti-bot bypass) | **5,000 credits for the first 7 days, then 1,000/month** | No | 7-day trial, then monthly |
+| [Crawl4AI](#crawl4ai) | Web scraping API | **1,000 credits/month ≈ ~10,000 plain pages** | No | Monthly (resets on the 1st) |
+| [Plugsky](#plugsky) | Proxy + scraping API (OpenAI-compatible) | **100 requests + 50K tokens/day** | No | Daily |
 
 ### SocialCrawl
 
@@ -178,6 +181,40 @@ This one does not search the web either — it pulls ready-made data from platfo
   2. Click the verification link in the email (login is blocked until the email is verified).
   3. Create an API key in the console at [https://www.socialcrawl.dev/dashboard/api](https://www.socialcrawl.dev/dashboard/api).
 - **Traps (tested 2026-11-22):** Small amount — only 100 calls. Email verification is mandatory before the first login.
+
+### ScraperAPI
+
+- **What:** A web scraping API that fetches a target page's HTML and bypasses anti-bot protection; supports JS rendering and country-specific exit nodes.
+- **Free:** 5,000 API credits for the first 7 days; after the trial (ends 2026-12-05) it drops to a free tier of 1,000 credits/month, 5 concurrent threads, no rollover.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up at [https://www.scraperapi.com](https://www.scraperapi.com) with an email address and set a password.
+  2. Pass the Cloudflare check, then click SIGN UP WITH EMAIL.
+  3. Click SEND ACTIVATION EMAIL, then click the activation link in the email.
+  4. The API key is auto-generated and shown on the console home page.
+- **Traps (tested 2026-11-28):** The Cloudflare check failed 8 times in a row on cloud browsers — a local Chrome is required. The trial lasts only 7 days. Google/Bing pages cost 25 credits each and anti-bot sites +10, so 5,000 burns fast.
+
+### Crawl4AI
+
+- **What:** A web scraping API (Scrape / Extract / SERP / Search / Answer), billed per page.
+- **Free:** 1,000 credits/month — plain pages 0.1 credit, real-browser pages 0.5, anti-bot sites 2 credits; failed calls are free. Roughly 10,000 plain pages/month, plus 20 starter credits in the first month.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up at [https://crawl4ai.com](https://crawl4ai.com) with an email address.
+  2. Click the verification link in the email — without it the key only works for 7 days.
+  3. Create an API key in the console and call `POST https://api.crawl4ai.com/scrape` with header `Authorization: Bearer <key>`.
+- **Traps (tested 2026-11-24):** Billed per page, not per call. Anti-bot sites cost 2 credits/page. Max 3 keys per account. The main key is shown in full only once — save it immediately.
+
+### Plugsky
+
+- **What:** A proxy + scraping API with an OpenAI-compatible interface, 100 free requests + 50K tokens/day, plus free chat models.
+- **Free:** 100 requests + 50K tokens/day for new accounts (micro/lite models), resets daily; 2 API keys.
+- **Card:** Not required.
+- **How to claim:**
+  1. Sign up at [https://plugsky.com](https://plugsky.com) with an email address and set a password.
+  2. Enter the 6-digit email code (valid 10 minutes).
+  3. The full API key is shown in the signup popup — copy and save it on the spot.
+- **Traps (tested 2026-11-28):** The full key is shown only once in the signup popup; afterwards only masked values remain. The 2-key limit is already full, so a new key requires revoking one first.
 
 ---
 
